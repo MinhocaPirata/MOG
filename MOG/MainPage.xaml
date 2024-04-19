@@ -27,7 +27,7 @@
               Grid.RowSpan="5"
               Grid.ColumnSpan="3"/>
 
-<!--..................................................................-->
+<!--................................ 1 ..................................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="1"
@@ -48,11 +48,42 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+    <Label Text="23"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="50"
+           Grid.Row="0"
+           Grid.RowSpan="2"
+           Grid.Column="0"/>
+
+    <Label Text="°C"
+           FontSize="10"
+           HorizontalOptions="End"
+           Grid.Row="0"
+           Grid.RowSpan="2"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
+    <Label Text="Tempo Nublado"
+           HorizontalOptions="Center" 
+           FontSize="13"
+           Grid.Row="2"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
+     <Label Text="Apucarana, PR"
+           HorizontalOptions="Center"
+           FontSize="14"
+           Grid.Row="3"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
        </Grid>
 
     </Frame>
 
-<!--..................................................................-->
+<!--................................. 2 ................................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="1"
@@ -69,13 +100,36 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
         </Grid.ColumnDefinitions>
-       </Grid>
+       
 
+    <Label Text="Chuva:"
+           FontSize="12"
+           Grid.Row="0"
+           Grid.Column="0"/>
+
+    <Label Text="Humidade:"
+           FontSize="12"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+    <Label Text="88"   
+           HorizontalOptions="End"
+           FontSize="12"
+           Grid.Row="0"
+           Grid.Column="1"/>
+
+    <Label Text="88"   
+           HorizontalOptions="End"
+           FontSize="12"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+        </Grid>
     </Frame>
 
-<!--..................................................................-->
+<!--................................. 3 .................................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="1"
@@ -86,20 +140,50 @@
 
        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="28"/>
         </Grid.ColumnDefinitions>
+
+        <Label Text="Vento"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="13"
+           Grid.Row="0"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
+    <Label Text="Força:"
+           FontSize="10"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+    <Label Text="Direção:"   
+           FontSize="10"
+           Grid.Row="2"/>
+
+     <Label Text="3"
+           HorizontalOptions="End"
+           FontSize="10"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+    <Label Text="397-n"
+           HorizontalOptions="End"
+           FontSize="10"
+           Grid.Row="2"
+           Grid.Column="1"/>
+
        </Grid>
 
     </Frame>
 
-<!--..................................................................-->
+<!--................................ 4 ..................................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="2"
@@ -110,20 +194,50 @@
 
        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="18"/>
         </Grid.ColumnDefinitions>
+
+    <Label Text="Sol"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="12"
+           Grid.Row="0"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
+    <Label Text="Amanhecer:"
+           FontSize="10"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+    <Label Text="Anoitecer:"   
+           FontSize="10"
+           Grid.Row="2"/>
+
+     <Label Text="06:1"
+           HorizontalOptions="End"
+           FontSize="10"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+    <Label Text="18:2"
+           HorizontalOptions="End"
+           FontSize="10"
+           Grid.Row="2"
+           Grid.Column="1"/>
+
        </Grid>
 
     </Frame>
 
-<!--..................................................................-->
+<!--.................................. 5 ................................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="2"
@@ -134,8 +248,7 @@
 
        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -143,11 +256,33 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <Label Text="Nov"
+           HorizontalOptions="End"
+           FontSize="12"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+    <Label Text="Fase:"
+           FontSize="12"
+           Grid.Row="1"
+           Grid.Column="0"/>
+
+    <Label Text="Lua"   
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           FontSize="15"
+           Grid.Row="0"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+
+    
+
        </Grid>
 
     </Frame>
 
-<!--..................................................................-->
+<!--.................................... 6 ..............................-->
 
     <Frame BorderColor="Transparent"
            Grid.Row="4"
