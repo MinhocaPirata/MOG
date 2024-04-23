@@ -49,7 +49,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-    <Label Text="23"
+    <Label x:Name="LabelTemperatura"
+           Text="23"
            HorizontalOptions="Center"
            VerticalOptions="Start"
            FontSize="50"
@@ -74,7 +75,8 @@
 
      <Label Text="Apucarana, PR"
            HorizontalOptions="Center"
-           FontSize="14"
+           VerticalOptions="End"
+           FontSize="12"
            Grid.Row="3"
            Grid.Column="0"
            Grid.ColumnSpan="2"/>
@@ -104,23 +106,27 @@
         </Grid.ColumnDefinitions>
        
 
-    <Label Text="Chuva:"
+    <Label x:Name="LabelChuvax"
+           Text="Chuva:"
            FontSize="12"
            Grid.Row="0"
            Grid.Column="0"/>
 
-    <Label Text="Humidade:"
+    <Label x:Name="Humidadex"
+           Text="Humidade:"
            FontSize="12"
            Grid.Row="1"
            Grid.Column="0"/>
 
-    <Label Text="88"   
+    <Label x:Name="Chuvanumero"
+           Text="88"   
            HorizontalOptions="End"
            FontSize="12"
            Grid.Row="0"
            Grid.Column="1"/>
 
-    <Label Text="88"   
+    <Label x:Name="Humidadenumero"
+           Text="88"   
            HorizontalOptions="End"
            FontSize="12"
            Grid.Row="1"
@@ -163,11 +169,13 @@
            Grid.Row="1"
            Grid.Column="0"/>
 
-    <Label Text="Direção:"   
+    <Label x:Name="ForcaNumero"
+           Text="Direção:"   
            FontSize="10"
            Grid.Row="2"/>
 
-     <Label Text="3"
+     <Label x:Name="DirecaoNumero"
+           Text="3"
            HorizontalOptions="End"
            FontSize="10"
            Grid.Row="1"
@@ -194,7 +202,7 @@
 
        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="17"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -221,13 +229,15 @@
            FontSize="10"
            Grid.Row="2"/>
 
-     <Label Text="06:1"
+    <Label x:Name="AmanhecerNumero"
+           Text="06:1"
            HorizontalOptions="End"
            FontSize="10"
            Grid.Row="1"
            Grid.Column="1"/>
 
-    <Label Text="18:2"
+    <Label x:Name="AnoitecerNumero"
+           Text="18:2"
            HorizontalOptions="End"
            FontSize="10"
            Grid.Row="2"
