@@ -17,7 +17,7 @@ public class Results
     public double Cloudness {get; set;}
     public double Rain {get; set;}
     public double WindSpeedy {get; set;}
-    public string WindCardinal {get; set;}
+    public string wind_cardinal {get; set;}
     public int Condition_code {get; set;}
     public string MoonPhase {get; set;}
     public int Image_id {get; set;}

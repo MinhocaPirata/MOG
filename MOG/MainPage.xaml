@@ -112,7 +112,7 @@
            Grid.Row="0"
            Grid.Column="0"/>
 
-    <Label x:Name="Humidadex"
+    <Label x:Name="LabelHumidadex"
            Text="Humidade:"
            FontSize="12"
            Grid.Row="1"
