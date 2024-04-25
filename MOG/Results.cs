@@ -22,4 +22,7 @@ public class Results
     public string MoonPhase {get; set;}
     public int Image_id {get; set;}
 
+    
+	public Results()
+	{}
 }
