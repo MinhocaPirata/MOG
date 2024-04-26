@@ -1,18 +1,34 @@
-﻿namespace MOG;
+﻿using System.Text.Json;
+
+namespace MOG;
 
 public partial class MainPage : ContentPage
-
-
 {
     Resposta resposta;
 	const string url =	"https://api.hgbrasil.com/weather?woeid=455927&key=";
 
-	Results results;
 
 	public MainPage()
 	{
 		InitializeComponent();
-		TestLayout();
+		AtualizaTempo();
+	}
+
+async void AtualizaTempo(){
+		try{
+			var HttpClient = new HttpClient();
+			var Response = await HttpClient.GetAsync(url);
+
+			if(Response.IsSuccessStatusCode){
+				var Content = await Response.Content.ReadAsStringAsync();
+				resposta = JsonSerializer.Deserialize<Resposta>(Content);
+			}
+		}
+
+		catch(Exception e){
+			System.Diagnostics.Debug.WriteLine(e);
+		}
+
 		PreencherTela();
 
 	}
@@ -33,21 +49,7 @@ public partial class MainPage : ContentPage
 
 
 
-	}
-
-	void TestLayout()
-	{
-		  results=new Results();
-		  resposta.results.Temp=44;
-		  resposta.results.Rain=25;
-		  resposta.results.Humidity=13;
-		  resposta.results.WindSpeedy=22;
-		  resposta.results.wind_cardinal="09";
-		  resposta.results.Sunrise=07;
-		  resposta.results.Sunset=10;
-		  resposta.results.MoonPhase="Full";
-		  resposta.results.Cloudness=55;
-		  resposta.results.Currently="10";
+	
 
 
 			if(resposta.results.Currently == "dia")
@@ -72,7 +74,5 @@ public partial class MainPage : ContentPage
 			else
 				FotoFundo.Source = "cleannight.jpg";
 		 }
-  
-  } 
-
-}
+  	} 
+ }
