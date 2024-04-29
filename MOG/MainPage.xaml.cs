@@ -1,9 +1,11 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace MOG;
 
 public partial class MainPage : ContentPage
-{
+{     
     Resposta resposta;
 	const string url =	"https://api.hgbrasil.com/weather?woeid=455927&key=";
 
@@ -19,45 +21,39 @@ async void AtualizaTempo(){
 			var HttpClient = new HttpClient();
 			var Response = await HttpClient.GetAsync(url);
 
-			if(Response.IsSuccessStatusCode){
+			if(Response.IsSuccessStatusCode)
+			{
 				var Content = await Response.Content.ReadAsStringAsync();
 				resposta = JsonSerializer.Deserialize<Resposta>(Content);
+				PreencherTela();
 			}
 		}
 
 		catch(Exception e){
 			System.Diagnostics.Debug.WriteLine(e);
 		}
-
-		PreencherTela();
-
 	}
 
 	void PreencherTela()
 	{
-		LabelTemperatura.Text=resposta.results.Temp.ToString();
-		Chuvanumero.Text=resposta.results.Rain.ToString();
-		Humidadenumero.Text=resposta.results.Humidity.ToString();
-		ForcaNumero.Text=resposta.results.WindSpeedy.ToString();
+		LabelTemperatura.Text=resposta.results.temp.ToString();
+		Chuvanumero.Text=resposta.results.rain.ToString();
+		Humidadenumero.Text=resposta.results.humidity.ToString();
+		ForcaNumero.Text=resposta.results.wind_speedy.ToString();
 		DirecaoNumero.Text=resposta.results.wind_cardinal;
-		AmanhecerNumero.Text=resposta.results.Sunrise.ToString();
-		AnoitecerNumero.Text=resposta.results.Sunset.ToString();
-		TLua.Text=resposta.results.MoonPhase;
-		cloudness.Text=resposta.results.Cloudness.ToString();
+		AmanhecerNumero.Text=resposta.results.sunrise;
+		AnoitecerNumero.Text=resposta.results.sunset;
+		TLua.Text=resposta.results.moon_phase;
+		cloudness.Text=resposta.results.cloudness.ToString();
 		
 
 
-
-
-	
-
-
-			if(resposta.results.Currently == "dia")
+			if(resposta.results.currently == "dia")
 		{
-			if(resposta.results.Rain > 10)
+			if(resposta.results.rain > 10)
 				FotoFundo.Source = "rainyday.jpg";
 		
-			else if(resposta.results.Cloudness > 20)
+			else if(resposta.results.cloudness > 20)
 				FotoFundo.Source = "cloudyday.jpg";
 
 			else
@@ -65,10 +61,10 @@ async void AtualizaTempo(){
 	}
 	else {
 
-			if(resposta.results.Rain > 10)
+			if(resposta.results.rain > 10)
 				FotoFundo.Source = "rainynight.jpg";
 		
-			else if(resposta.results.Cloudness > 20)
+			else if(resposta.results.cloudness > 20)
 				FotoFundo.Source = "cloudynight.jpg";
 
 			else
